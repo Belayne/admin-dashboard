@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.container {
+    display: grid;
+    grid: 1fr 4fr / 1fr 4fr 1fr;
+    height: 100vh;
+}
+
+header {
+    grid-column: 2 / 4;
+}
+
+nav {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.projects {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.sidebars {
+    grid-column: 3;
+    grid-row: 2;
+}
