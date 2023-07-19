@@ -30,6 +30,7 @@ body {
     display: grid;
     grid: 1fr 4fr / 1fr 4fr 1fr;
     height: 100vh;
+    row-gap: 30px;
 }
 
 header {
@@ -204,9 +205,9 @@ ion-icon[name=notifications-outline]:hover {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-template-rows: min-content;
     grid-auto-rows: 250px;
-    padding: 30px 20px;
+    padding: 0 20px;
     column-gap: 25px;
-    row-gap: 30px;
+    row-gap: 20px;
 }
 
 .projects>h2 {
@@ -246,3 +247,50 @@ ion-icon[name=notifications-outline]:hover {
 .card-icons *:hover {
     cursor: pointer;
 }
+
+.sidebar {
+    display: grid;
+    grid-template-rows: min-content;
+    gap: 20px;
+    padding-right: 30px;
+}
+
+.ann-div {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 30ch;
+    grid-auto-rows: 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 30px;
+    background-color: var(--card-bck-color);
+    border-radius: 10px;
+}
+
+.announcement {
+    display: grid;
+    gap: 5px;
+}
+
+.ann-text {
+    line-height: 1rem;
+    height: calc(4*1rem);
+    overflow-y: scroll;
+}
+
+.ann-text::-webkit-scrollbar {
+    width: 0px
+}
+
+.ann-text:hover::-webkit-scrollbar {
+    width: 1px;
+}
+
+.ann-text:hover::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+.announcement p {
+    font-size: 0.9rem;
+    color: var(--card-text-color);
+}
+
