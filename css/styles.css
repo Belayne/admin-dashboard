@@ -104,7 +104,9 @@ ion-icon[name=grid] {
 
 .small-profile {
     width: 50px;
+    height: 50px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .header-first-row {
@@ -250,7 +252,7 @@ ion-icon[name=notifications-outline]:hover {
 
 .sidebar {
     display: grid;
-    grid-template-rows: min-content;
+    grid-template-rows: min-content min-content min-content min-content;
     gap: 20px;
     padding-right: 30px;
 }
@@ -261,10 +263,11 @@ ion-icon[name=notifications-outline]:hover {
     grid-template-columns: 30ch;
     grid-auto-rows: 1fr;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     padding: 20px 30px;
     background-color: var(--card-bck-color);
     border-radius: 10px;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.1);    
 }
 
 .announcement {
@@ -274,7 +277,7 @@ ion-icon[name=notifications-outline]:hover {
 
 .ann-text {
     line-height: 1rem;
-    height: calc(4*1rem);
+    height: calc(3*1rem);
     overflow-y: scroll;
 }
 
@@ -293,4 +296,41 @@ ion-icon[name=notifications-outline]:hover {
     font-size: 0.9rem;
     color: var(--card-text-color);
 }
+
+.trend-div {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    padding: 20px 30px;
+    background-color: var(--card-bck-color);
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.trend-profile-div {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
+    column-gap: 5px;
+}
+
+.trend-profile-div .small-profile {
+    grid-row: 1 / 3;
+    justify-self: center;
+    align-self: center;
+}
+
+.trend-profile-div p:first-of-type {
+    font-size: 1.2rem;
+    align-self: flex-end;
+}
+
+.trend-profile-div p:last-of-type {
+    font-size: 0.9rem;
+    font-weight: 400;
+    grid-column: 2;
+    color: var(--card-text-color);
+}
+
 
