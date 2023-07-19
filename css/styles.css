@@ -4,6 +4,10 @@
     --nav-txt-color: #FFF;
     --btn-txt-color: #FFF;
     --header-txt-color: black;
+    --header-color: #FFF;
+    --body-bck-color: #e2e8f0;
+    --card-bck-color: #FFF;
+    --card-text-color: #6c6c6c;
 }
 
 html {
@@ -16,6 +20,10 @@ html {
     box-sizing: inherit;
     padding: 0;
     margin: 0;
+}
+
+body {
+    background-color: var(--body-bck-color);
 }
 
 .container {
@@ -32,6 +40,7 @@ header {
     grid-column: 2 / 4;
     padding: 20px 50px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--header-color);
 }
 
 nav {
@@ -172,7 +181,7 @@ ion-icon[name=notifications-outline]:hover {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
 }
 
 .btns-div button {
@@ -184,6 +193,58 @@ ion-icon[name=notifications-outline]:hover {
     color: var(--btn-txt-color);
     font-size: 1.1rem;
     font-weight: 600;
+}
+
+.btns-div button:hover {
+    cursor: pointer;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: min-content;
+    grid-auto-rows: 250px;
+    padding: 30px 20px;
+    column-gap: 25px;
+    row-gap: 30px;
+}
+
+.projects > h2 {
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+
+.card {
+    background-color: var(--card-bck-color);
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    padding: 20px 20px 30px 20px;
+    border-left: 10px solid #f0b429;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.1);
+    gap: 5px;
+}
+
+.card p {
+    color: var(--card-text-color);
+    font-size: 1.1rem;
+}
+
+.card > h3 {
+    align-self: flex-end;
+    font-size: 1.3rem;
+}
+
+.card-icons {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2rem;
+    gap: 10px;
+    align-self: flex-end;
+}
+
+.card-icons *:hover {
+    cursor: pointer;
 }
 
 
