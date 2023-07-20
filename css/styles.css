@@ -360,86 +360,33 @@ ion-icon[name=notifications-outline]:hover {
     align-items: center;
     width: inherit;
     height: inherit;
-    border: 1px solid rgba(0, 0, 0, 0.349);
     border-radius: 50%;
     overflow: hidden;
+    background-color: var(--body-bg-clr);
 }
 
 ion-icon[name=moon] {
     position: absolute;
-    bottom: 100%;
-    color: black;
+    color: white;
 }
 
 ion-icon[name=sunny] {
-    position: absolute;
     color: black;
 }
 
-.btn-animation {
-    animation-name: btn-flip;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-}
-
-.sun-animation {
-    animation-name: btn-flip-sun;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
+.hide {
+    opacity: 0;
 }
 
 .dark-btn-wrapper {
     display: flex;
     align-items: center;
     margin-left: auto;
-    border-radius: 20px;
     height: 40px;
     width: 40px;
-    background-color: #d0d0d0;
-    box-shadow: -1px 0px 3px inset rgba(0, 0, 0, 0.5);
 }
 
 .dark-btn-wrapper:hover,
 .dark-mode-btn:hover {
     cursor: pointer;
-}
-
-
-
-@keyframes btn-flip {
-    0% {
-        bottom: 100%;
-    }
-
-    50% {
-        bottom: 75%;
-    }
-
-    75% {
-        bottom: 50%;
-    }
-
-    100% {
-        bottom: 25%;
-    }
-}
-
-@keyframes btn-flip-sun {
-    0% {
-        top: 25%;
-    }
-
-    50% {
-        top: 50%;
-    }
-
-    75% {
-        top: 75%;
-    }
-
-    100% {
-        top: 100%;
-    }
 }

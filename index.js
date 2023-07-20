@@ -7,7 +7,7 @@ const sunIcon = document.querySelector('ion-icon[name=sunny]')
 darkBtnWrapper.addEventListener("click", toggleDark);
 
 function toggleDark() {
-    moonIcon.classList.toggle("btn-animation");
-    sunIcon.classList.toggle("sun-animation");
+    moonIcon.classList.toggle("hide");
+    sunIcon.classList.toggle("hide");
     htmlClasses.toggle('dark');
 }
